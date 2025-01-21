@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-box {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .prediction-message {
+    margin-bottom: 20px;
+  }
+  
+  .prediction-message p {
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .prediction-message p.invalid {
+    color: red;
+  }
+  

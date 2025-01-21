@@ -1,0 +1,285 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>Credit Card Fraud  Form with floating placeholder and light button</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head> -->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Credit Card Fraud </title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <br/>
+    <h1>Machine Learning CS585</h1>
+    <h1>Credit Card Fraud Detection using Machine Learning</h1>
+    <br/>
+    <h1>Manavkumar Patel || Nitesha Paatil</h1>
+    <br/>
+    <br/>
+    <div class="login-box">
+      <h2>Enter Input Data</h2>
+      <form action="/predict" method="post">
+          <!-- <label for="target">TARGET:</label>
+          <select id="target" name="target">
+            <option value="1">1</option>
+            <option value="0">0</option>
+          </select><br><br> -->
+          
+          
+          <div class="user-box">
+            <label for="region_rating_client_w_city">REGION_RATING_CLIENT_W_CITY:</label>
+            <select id="region_rating_client_w_city" name="region_rating_client_w_city">
+              <option value="2">2</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="region_rating_client">REGION_RATING_CLIENT:</label>
+            <select id="region_rating_client" name="region_rating_client">
+              <option value="2">2</option>
+              <option value="1">1</option>
+              <option value="3">3</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="reg_city_not_work_city">REG_CITY_NOT_WORK_CITY:</label>
+            <select id="reg_city_not_work_city" name="reg_city_not_work_city">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="name_education_type">NAME_EDUCATION_TYPE:</label>
+            <select id="name_education_type" name="name_education_type">
+              <option value="Secondary / secondary special">Secondary / secondary special</option>
+              <option value="Higher education">Higher education</option>
+              <option value="Incomplete higher">Incomplete higher</option>
+              <option value="Lower secondary">Lower secondary</option>
+              <option value="Academic degree">Academic degree</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="code_gender">CODE_GENDER:</label>
+            <select id="code_gender" name="code_gender">
+              <option value="M">M</option>
+              <option value="F">F</option>
+              <option value="XNA">XNA</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="name_income_type">NAME_INCOME_TYPE:</label>
+            <select id="name_income_type" name="name_income_type">
+              <option value="Working">Working</option>
+              <option value="State servant">State servant</option>
+              <option value="Commercial associate">Commercial associate</option>
+              <option value="Pensioner">Pensioner</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Student">Student</option>
+              <option value="Businessman">Businessman</option>
+              <option value="Maternity leave">Maternity leave</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="flag_emp_phone">FLAG_EMP_PHONE:</label>
+            <select id="flag_emp_phone" name="flag_emp_phone">
+              <option value="1">1</option>
+              <option value="0">0</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="reg_city_not_live_city">REG_CITY_NOT_LIVE_CITY:</label>
+            <select id="reg_city_not_live_city" name="reg_city_not_live_city">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="flag_document_3">FLAG_DOCUMENT_3:</label>
+            <select id="flag_document_3" name="flag_document_3">
+              <option value="1">1</option>
+              <option value="0">0</option>
+            </select><br><br>
+          </div>
+          
+          
+          
+          <div class="user-box">
+            <label for="name_housing_type">NAME_HOUSING_TYPE:</label>
+            <select id="name_housing_type" name="name_housing_type">
+              <option value="House / apartment">House / apartment</option>
+              <option value="Rented apartment">Rented apartment</option>
+              <option value="With parents">With parents</option>
+              <option value="Municipal apartment">Municipal apartment</option>
+              <option value="Office apartment">Office apartment</option>
+              <option value="Co-op apartment">Co-op apartment</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="live_city_not_work_city">LIVE_CITY_NOT_WORK_CITY:</label>
+            <select id="live_city_not_work_city" name="live_city_not_work_city">
+              <option value="0">0</option>
+              <option value="1">1</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="name_contract_type">NAME_CONTRACT_TYPE:</label>
+            <select id="name_contract_type" name="name_contract_type">
+              <option value="Cash loans">Cash loans</option>
+              <option value="Revolving loans">Revolving loans</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="organization_type">ORGANIZATION_TYPE:</label>
+            <select id="organization_type" name="organization_type">
+              <option value="Business Entity Type 3">Business Entity Type 3</option>
+              <option value="School">School</option>
+              <option value="Government">Government</option>
+              <option value="Religion">Religion</option>
+              <option value="Other">Other</option>
+              <option value="XNA">XNA</option>
+              <option value="Electricity">Electricity</option>
+              <option value="Medicine">Medicine</option>
+              <option value="Business Entity Type 2">Business Entity Type 2</option>
+              <option value="Self-employed">Self-employed</option>
+              <option value="Transport: type 2">Transport: type 2</option>
+              <option value="Construction">Construction</option>
+              <option value="Housing">Housing</option>
+              <option value="Kindergarten">Kindergarten</option>
+              <option value="Trade: type 7">Trade: type 7</option>
+              <option value="Industry: type 11">Industry: type 11</option>
+              <option value="Military">Military</option>
+              <option value="Services">Services</option>
+              <option value="Security Ministries">Security Ministries</option>
+              <option value="Transport: type 4">Transport: type 4</option>
+              <option value="Industry: type 1">Industry: type 1</option>
+              <option value="Emergency">Emergency</option>
+              <option value="Security">Security</option>
+              <option value="Trade: type 2">Trade: type 2</option>
+              <option value="University">University</option>
+              <option value="Transport: type 3">Transport: type 3</option>
+              <option value="Police">Police</option>
+              <option value="Business Entity Type 1">Business Entity Type 1</option>
+              <option value="Postal">Postal</option>
+              <option value="Industry: type 4">Industry: type 4</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Restaurant">Restaurant</option>
+              <option value="Culture">Culture</option>
+              <option value="Hotel">Hotel</option>
+              <option value="Industry: type 7">Industry: type 7</option>
+              <option value="Trade: type 3">Trade: type 3</option>
+              <option value="Industry: type 3">Industry: type 3</option>
+              <option value="Bank">Bank</option>
+              <option value="Industry: type 9">Industry: type 9</option>
+              <option value="Insurance">Insurance</option>
+              <option value="Trade: type 6">Trade: type 6</option>
+              <option value="Industry: type 2">Industry: type 2</option>
+              <option value="Transport: type 1">Transport: type 1</option>
+              <option value="Industry: type 12">Industry: type 12</option>
+              <option value="Mobile">Mobile</option>
+              <option value="Trade: type 1">Trade: type 1</option>
+              <option value="Industry: type 5">Industry: type 5</option>
+              <option value="Industry: type 10">Industry: type 10</option>
+              <option value="Legal Services">Legal Services</option>
+              <option value="Advertising">Advertising</option>
+              <option value="Trade: type 5">Trade: type 5</option>
+              <option value="Cleaning">Cleaning</option>
+              <option value="Industry: type 13">Industry: type 13</option>
+              <option value="Trade: type 4">Trade: type 4</option>
+              <option value="Telecom">Telecom</option>
+              <option value="Industry: type 8">Industry: type 8</option>
+              <option value="Realtor">Realtor</option>
+              <option value="Industry: type 6">Industry: type 6</option>
+            </select><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="region_population_relative">REGION_POPULATION_RELATIVE (Min: 0.00029, Max: 0.072508):</label>
+            <input type="number" id="region_population_relative" name="region_population_relative" step="any" min="0.00029" max="0.072508"><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="days_registration">DAYS_REGISTRATION (Min: -24672.0, Max: 0.0):</label>
+            <input type="number" id="days_registration" name="days_registration" step="any" min="-24672.0" max="0.0"><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="days_employed">DAYS_EMPLOYED (Min: -17912, Max: 365243):</label>
+            <input type="number" id="days_employed" name="days_employed" min="-17912" max="365243"><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="days_id_publish">DAYS_ID_PUBLISH (Min: -7197, Max: 0):</label>
+            <input type="number" id="days_id_publish" name="days_id_publish" min="-7197" max="0"><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="days_last_phone_change">DAYS_LAST_PHONE_CHANGE (Min: -4292.0, Max: 0.0):</label>
+            <input type="number" id="days_last_phone_change" name="days_last_phone_change" step="any" min="-4292.0" max="0.0"><br><br>
+          </div>
+
+          <div class="user-box">
+            <label for="days_birth">DAYS_BIRTH (Min: -25229, Max: -7489):</label>
+            <input type="number" id="days_birth" name="days_birth" min="-25229" max="-7489"><br><br>
+          </div>
+
+          
+          <!-- <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a> -->
+          <input href="#" type="submit" value="Predict">
+      </form>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- 
+'TARGET'
+'REGION_RATING_CLIENT_W_CITY'
+'REGION_RATING_CLIENT'
+'REG_CITY_NOT_WORK_CITY'
+'NAME_EDUCATION_TYPE'
+'CODE_GENDER'
+'NAME_INCOME_TYPE'
+'FLAG_EMP_PHONE'
+'REG_CITY_NOT_LIVE_CITY'
+'FLAG_DOCUMENT_3'
+'NAME_HOUSING_TYPE'
+'LIVE_CITY_NOT_WORK_CITY'
+'NAME_CONTRACT_TYPE'
+'ORGANIZATION_TYPE'
+'REGION_POPULATION_RELATIVE'
+'DAYS_REGISTRATION'
+'DAYS_EMPLOYED'
+'DAYS_ID_PUBLISH'
+'DAYS_LAST_PHONE_CHANGE'
+'DAYS_BIRTH'
+-->

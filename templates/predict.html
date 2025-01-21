@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <p>The predicted target value is: {{ prediction }}</p>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="static\styleP.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Prediction Result</h2>
+        <div class="prediction-message">
+            {% if prediction == 1 %}
+                <p>This is a potential target.</p>
+            {% elif prediction == 0 %}
+                <p>This is not a target.</p>
+            {% else %}
+                <p>Invalid prediction value.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+
+
